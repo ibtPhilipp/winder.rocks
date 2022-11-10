@@ -7,7 +7,8 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Philipp Winder</title>
-        <meta name="description" content="Philipp Winder's online home. It provides direct contact opportunities." />   
+        <meta name="description" content="Philipp Winder's online home. Say hi and get in touch." />
+        <meta name="keywords" content="philipp, winder, science, financial well-being, financial health, consultant, behavioral science"></meta>
         <link rel="shortcut icon" href="/favicon.ico"/>
         <link rel="apple-touch-icon" href="/favicon.ico" />
       </Head>

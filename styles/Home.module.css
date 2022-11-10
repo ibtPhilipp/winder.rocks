@@ -191,8 +191,13 @@
   flex-wrap: wrap;
 }
 
-.svg {
-  fill: none;
+.svg { 
+  transition: all 0.4s ease;
+}
+
+.svg:hover {
+  filter: none !important;
+  transform: translateY(-6px)
 }
 
 .button1 {
