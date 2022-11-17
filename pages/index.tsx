@@ -1,8 +1,53 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+
+  const [text, setText] = useState("I'm a PhD student at the University of St. Gallen");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await new Promise(f => setTimeout(f, 4000));
+    };
+
+    const elem = document.getElementById("testa");
+
+    const loop = async () => {
+      setText("I'm a PhD student at the University of St. Gallen.");
+      elem?.classList.add(styles.roles_container_list_item_intro);
+
+      await fetchData();
+      elem?.classList.remove(styles.roles_container_list_item_intro);
+      setText("I'm a behavioral scientist at the IBT.");
+      elem?.classList.add(styles.roles_container_list_item_intro);
+  
+      await fetchData()
+      elem?.classList.remove(styles.roles_container_list_item_intro);
+      setText("I'm a personal financial well-being enthusiast.");
+      elem?.classList.add(styles.roles_container_list_item_intro);
+  
+      await fetchData()
+      setText("I consult individuals on financial well-being.")
+      elem?.classList.add(styles.roles_container_list_item_intro);
+  
+      await fetchData()
+      setText("I consult founders and small business owners.")
+      elem?.classList.add(styles.roles_container_list_item_intro);
+
+      await fetchData()
+      setText("I'm Philipp Winder.")
+      elem?.classList.add(styles.roles_container_list_item_intro);
+
+      await fetchData()
+      loop();
+    }
+
+    loop()
+
+  }, [])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -29,14 +74,7 @@ export default function Home() {
         </div>
         <div className={styles.roles}>
           <div className={styles.roles_container}>
-            <div className={styles.roles_container_list}>
-              <div className={styles.roles_container_list_item}>I am a PhD student at the University of St. Gallen.</div>
-              <div className={styles.roles_container_list_item}>I am a behavioral scientist at the Insitute of Behavioral Science and Technology.</div>
-              <div className={styles.roles_container_list_item}>I am a personal financial well-being enthusiast and advocate.</div>
-              <div className={styles.roles_container_list_item}>I consult individuals on personal financial well-being.</div>
-              <div className={styles.roles_container_list_item}>I consult founders and small business owners.</div>
-              <div className={styles.roles_container_list_item}>I am Philipp Winder.</div>
-            </div>
+            <div id="testa" className={styles.roles_container_list_item}>{text}</div>
           </div>
         </div>
         <div className={styles.buttons}>

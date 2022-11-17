@@ -1,5 +1,5 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 0.5rem;
 }
 
 .main {
@@ -17,6 +17,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap-reverse;
+  width: 80%;
 }
 
 .first {
@@ -29,88 +31,78 @@
   font-size: 54px;
 }
 
-.name {
-  margin-right: 16rem;
-}
-
 .image {
-  width: 16rem;
+  width: 50%;
+  min-width: 10rem;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .image img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 10rem;
+  max-height: 10rem;
 }
 
 .roles {
   margin-top: 8rem;
-  height: 160px;
   overflow:hidden;
-  
   font-family: "Montserrat";
   font-size: 16px;
-  line-height: 40px;
+  height: 160px;
+  width: 100%;
 }
   
 .roles_container {
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  height: 40px;
   padding: 0 40px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: all .4s ease;
 }
 
 .roles_container::before {
   content: '[';
   color: #F90B0B;
-  font-size: 36px;
-  line-height: 40px;
+  font-size: 42px;
+  line-height: 48px;
   
   -webkit-animation-name: opacity;
-  -webkit-animation-duration: 3.7s;
+  -webkit-animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;
   animation-name: opacity;
-  animation-duration: 3.7s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
 }
 
 .roles_container::after {
   content: ']';
   color: #F90B0B;
-  font-size: 36px;
-  line-height: 40px;
+  font-size: 42px;
+  line-height: 48px;
   
   -webkit-animation-name: opacity;
-  -webkit-animation-duration: 3.7s;
+  -webkit-animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;
   animation-name: opacity;
-  animation-duration: 3.7s;
-  animation-iteration-count: infinite;
-}
-
-.roles_container_text {
-  display: inline;
-  float: left;
-  margin: 0;
-}
-
-.roles_container_list {
-  margin-top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  -webkit-animation-name: change;
-  -webkit-animation-duration: 36s;
-  -webkit-animation-iteration-count: infinite;
-  animation-name: change;
-  animation-duration: 36s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
 }
 
 .roles_container_list_item {
-  line-height:40px;
-  margin: 0px;
+  width: 100%;
+  max-width: 32rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.roles_container_list_item_intro {
+  
 }
 
 @-webkit-keyframes opacity {
@@ -118,35 +110,9 @@
   50% {opacity:1;}
 }
 
-@-webkit-keyframes change {
-  0%, 8%, 100% {transform:translate3d(0,0,0);}
-  10%, 18% {transform:translate3d(0,-40px,0);}
-  20%, 28% {transform:translate3d(0,-80px,0);}
-  30%, 38% {transform:translate3d(0,-120px,0);}
-  40%, 48% {transform:translate3d(0,-160px,0);}
-  50%, 58% {transform:translate3d(0,-200px,0);}
-  60%, 68% {transform:translate3d(0,-160px,0);}
-  70%, 78% {transform:translate3d(0,-120px,0);}
-  80%, 88% {transform:translate3d(0,-80px,0);}
-  90%, 98% {transform:translate3d(0,-40px,0);}
-}
-
 @-o-keyframes opacity {
   0%, 100% {opacity:0;}
   50% {opacity:1;}
-}
-
-@-o-keyframes change {
-  0%, 8%, 100% {transform:translate3d(0,0,0);}
-  10%, 18% {transform:translate3d(0,-40px,0);}
-  20%, 28% {transform:translate3d(0,-80px,0);}
-  30%, 38% {transform:translate3d(0,-120px,0);}
-  40%, 48% {transform:translate3d(0,-160px,0);}
-  50%, 58% {transform:translate3d(0,-200px,0);}
-  60%, 68% {transform:translate3d(0,-160px,0);}
-  70%, 78% {transform:translate3d(0,-120px,0);}
-  80%, 88% {transform:translate3d(0,-80px,0);}
-  90%, 98% {transform:translate3d(0,-40px,0);}
 }
 
 @-moz-keyframes opacity {
@@ -154,41 +120,16 @@
   50% {opacity:1;}
 }
 
-@-moz-keyframes change {
-  0%, 8%, 100% {transform:translate3d(0,0,0);}
-  10%, 18% {transform:translate3d(0,-40px,0);}
-  20%, 28% {transform:translate3d(0,-80px,0);}
-  30%, 38% {transform:translate3d(0,-120px,0);}
-  40%, 48% {transform:translate3d(0,-160px,0);}
-  50%, 58% {transform:translate3d(0,-200px,0);}
-  60%, 68% {transform:translate3d(0,-160px,0);}
-  70%, 78% {transform:translate3d(0,-120px,0);}
-  80%, 88% {transform:translate3d(0,-80px,0);}
-  90%, 98% {transform:translate3d(0,-40px,0);}
-}
-
 @keyframes opacity {
   0%, 100% {opacity:0;}
   50% {opacity:1;}
-}
-
-@keyframes change {
-  0%, 8%, 100% {transform:translate3d(0,0,0);}
-  10%, 18% {transform:translate3d(0,-40px,0);}
-  20%, 28% {transform:translate3d(0,-80px,0);}
-  30%, 38% {transform:translate3d(0,-120px,0);}
-  40%, 48% {transform:translate3d(0,-160px,0);}
-  50%, 58% {transform:translate3d(0,-200px,0);}
-  60%, 68% {transform:translate3d(0,-160px,0);}
-  70%, 78% {transform:translate3d(0,-120px,0);}
-  80%, 88% {transform:translate3d(0,-80px,0);}
-  90%, 98% {transform:translate3d(0,-40px,0);}
 }
 
 .buttons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .svg { 
@@ -201,8 +142,10 @@
 }
 
 .button1 {
-  margin-right: 1rem;
   margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
