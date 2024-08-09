@@ -51,47 +51,24 @@
   height: 160px;
   width: 100%;
 }
-  
+
 .roles_container {
   display: flex;
   flex-direction: row;
-  overflow: hidden;
   padding: 0 40px;
   width: 100%;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
-  transition: all .4s ease;
 }
-
-.roles_container::before {
-  content: '[';
-  color: #F90B0B;
-  font-size: 42px;
-  line-height: 48px;
   
-  -webkit-animation-name: opacity;
-  -webkit-animation-duration: 4s;
-  -webkit-animation-iteration-count: infinite;
-  animation-name: opacity;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-}
-
-.roles_container::after {
-  content: ']';
+.roles_brackets {
   color: #F90B0B;
-  font-size: 42px;
-  line-height: 48px;
-  
-  -webkit-animation-name: opacity;
-  -webkit-animation-duration: 4s;
-  -webkit-animation-iteration-count: infinite;
-  animation-name: opacity;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+  width: 16px;
+  display: inline-block;
 }
 
-.roles_container_list_item {
+.roles_text {
+  display: inline-block;
   width: 100%;
   max-width: 32rem;
   margin-left: 1rem;
@@ -101,29 +78,24 @@
   text-align: center;
 }
 
-.roles_container_list_item_intro {
-  
+.fadeIn {
+  animation: fadeIn .5s ease-in-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-@-webkit-keyframes opacity {
-  0%, 100% {opacity:0;}
-  50% {opacity:1;}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@-o-keyframes opacity {
-  0%, 100% {opacity:0;}
-  50% {opacity:1;}
-}
 
-@-moz-keyframes opacity {
-  0%, 100% {opacity:0;}
-  50% {opacity:1;}
-}
-
-@keyframes opacity {
-  0%, 100% {opacity:0;}
-  50% {opacity:1;}
-}
 
 .buttons {
   display: flex;
